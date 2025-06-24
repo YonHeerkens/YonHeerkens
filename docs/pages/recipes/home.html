@@ -12,7 +12,9 @@
         <div class="filter">
             <p>Total recipes = </p>
         </div>
-        <button id="addRecipe">Add recipe</button>
+        <button id="displayUsers">Get users</button>
+        <button id="removeDisplayedUsers">Remove displayed users</button>
+        <div id="userlist"></div>
     </aside>
     <main>
         <h1>Recipes</h1>
@@ -24,7 +26,45 @@
     </main>
 </body>
 
-<script type="module">
-    console.log("WOW I HAVE LOADED MY JS :D")
+<script>    
+    const users = ["john, Doe, Mary, Pete"]
+    const generateUserList = (users) => {
+        const container = document.getElementById("userlist")
+        const ul = document.createElement('ul');
+        
+        users.forEach(user => {
+            const li = document.createElement('li');
+            li.textContent = user;
+            ul.appendChild(li)
+        })
+        container.innerHTML = '';
+        container.appendChild(ul)
+    }
+
+    const getUsers = async () => {
+        console.log("Going to fetch some stuff")
+        const response = await fetch('https://pi_api.yonheerkens.dev/api/user');
+        const data = await response.json();
+        console.log(data);
+        console.log(data.users)
+        return data.users;
+    }
+
+    const parseUsersData = (userData) => {
+        return userData.map(user => `${user.first_name} ${user.last_name}`)
+    }
+
+    const displayUsers = async () => {
+        const users = await getUsers();
+        console.log(users)
+        const parsedUsers = parseUsersData(users)
+        generateUserList(parsedUsers);
+    }
+
+    const removeDisplayedUsers = () => document.getElementById("userlist").innerHTML = '';
+
+    document.getElementById("displayUsers").addEventListener('click', displayUsers);
+    document.getElementById("removeDisplayedUsers").addEventListener('click', removeDisplayedUsers);
+
 </script>
 </html>
