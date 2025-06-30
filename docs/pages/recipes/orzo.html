@@ -19,76 +19,13 @@
             <img class="side-bar-image" src="../../assets/recipes/orzo.png" 
             alt="A plate of orzo with cherry tomatoes and tomato sauce dressed with goat cheese and rucola">
         </header>
-        <section>
-            <div class="side-bar-meta-detail">
-                <span class="meta-label">Prep</span>
-                <span class="meta-value">15 min</span>                    
-            </div>
-            <div class="side-bar-meta-detail">
-                <span class="meta-label">Cook</span>
-                <span class="meta-value">10 min</span>                
-            </div>
-            <!--Only show this item if there is an oven time-->
-            <div class="side-bar-meta-detail">
-                <span class="meta-label">Oven</span>
-                <span class="meta-value">35 min</span>                
-            </div>
-            <div class="side-bar-meta-detail">
-                <span class="meta-label">Servings</span>
-                <span class="meta-value">4 pers.</span>                
-            </div>
-        </section>
+        <section class="metas"></section>
 
         <article class="side-bar-ingredient-list">
             <h2 class="side-bar-ingredient-title">
                 Ingredients
             </h2>
             <!--Fill with as many ingredients as you have-->
-            <div class="side-bar-ingredient">
-                <span class="ingredient-value">passata (tomatensaus)</span>
-                <span class="ingredient-amount">350 mL</span>
-            </div>
-            <div class="side-bar-ingredient">
-                <span class="ingredient-value">paprika</span>
-                <span class="ingredient-amount">2 stuks</span>
-            </div>
-            <div class="side-bar-ingredient">
-                <span class="ingredient-value">rode ui</span>
-                <span class="ingredient-amount">1 stuk</span>
-            </div>
-            <div class="side-bar-ingredient">
-                <span class="ingredient-value">Scheutje water</span>
-                <!--Als geen hoeveelheid dan leeg laten-->
-                <span class="ingredient-amount"></span>
-            </div>
-            <div class="side-bar-ingredient">
-                <span class="ingredient-value">groentebouillon</span>
-                <span class="ingredient-amount">700 mL</span>
-            </div>
-            <div class="side-bar-ingredient">
-                <span class="ingredient-value">orzo</span>
-                <span class="ingredient-amount">400 g</span>
-            </div>
-            <div class="side-bar-ingredient">
-                <span class="ingredient-value">Cherry tomaatjes (naar eigen smaak)</span>
-                <span class="ingredient-amount"></span>
-            </div>
-            <div class="side-bar-ingredient">
-                <span class="ingredient-value">Chorizo worst (licht pittig)</span>
-                <span class="ingredient-amount">1 stuk</span>
-            </div>
-            <div class="side-bar-ingredient">
-                <span class="ingredient-value">Geitenkaas</span>
-                <span class="ingredient-amount"></span>
-            </div>
-            <div class="side-bar-ingredient">
-                <span class="ingredient-value">Rucola</span>
-                <span class="ingredient-amount"></span>
-            </div>
-            <div class="side-bar-ingredient">
-                <span class="ingredient-value">Aluminium folie (ovenschaal bedekkend groot)</span>
-                <span class="ingredient-amount"></span>
-            </div>
         </article>
     </nav>
 
@@ -97,30 +34,117 @@
             <h1 class="main-prep-title">
                 Preperation instructions
             </h2>
-            <ol class="main-prep-instructions">
-                <li>Haal de schil van de chorizo worst af en snij het in kleine stukjes</li>
-                <li>Snij de paprika in halfe dunne reepjes</li>
-                <li>Snipper de ui en pers de knoflook (Houd knoflook apart)</li>
-                <li>Halveer de cherry tomaatjes</li>
-                <li>Vet een ovenschaal in en zet de oven op 180 graden</li>
-                <li>Verkruimel de geitenkaas</li>
-            </ol>
+            <ol class="main-prep-instructions"></ol>
         </article>
         <article class="main-cook">
             <h1 class="main-cook-title">
                 Cooking instructions
             </h2>
-            <ol class="main-cook-instructions">
-                <li>Verhit een hapjes pan en voeg hier de chorizo stukjes aan toe (plaat stand 7). Er hoeft geen extra olie toegevoegd worden omdat chorizo al best veel vet bevat. 
-                    Bak de chorizo uit totdat het meeste vet eruit is gekomen en ze wat harder aanvoelen. </li>
-                <li>Voeg de ui en paprika toe en voeg een klein beetje water toe. Bak voor 5 min.</li>
-                <li>Voeg op het einde de knoflook toe en bak nog een minuut.</li>
-                <li>Voeg de cherry tomaatjes, orzo, passata, groentebouillon en de chorizo mix toe aan de ovenschaal en mix het zodat alles goed gemengd is.</li>
-                <li>Plaats een stuk aluminium folie over de ovenschaal zodat alles bedekt is. Plaats de ovenschaal voor 35 min in de oven.</li>
-            </ol>
+            <ol class="main-cook-instructions"></ol>
         </article>
     </section>
 </div>
 </body>
 
+<script>
+    const metas = {
+        Prep: "15 min",
+        Cook: "10 min",
+        Oven: "35 min",
+        Servings: "4 pers."
+    }
+    
+    const ingredients = [
+        ["passata (tomatensaus)", "350 mL"],
+        ["paprika", "2 stuks"],
+        ["rode ui", "1 stuk"],
+        ["Scheutje water", ""],
+        ["Groentebouillon", "700 mL"],
+        ["Orzo", "400 g"],
+        ["Cherry tomaatjes (Hoeveelheid naar eigen smaak)", ""],
+        ["Chorizo worst (licht pittig)", "1 stuk"],
+        ["Geitenkaas", ""],
+        ["Rucola", ""],
+        ["Aluminium folie (Ovenschaal bedekkend)", ""]
+    ]
+
+    const prepInstructions = [
+        "Haal de schil van de chorizo worst af en snij het in kleine stukjes",
+        "Snij de paprika in halfe dunne reepjes",
+        "Snipper de ui en pers de knoflook (Houd knoflook apart)",
+        "Halveer de cherry tomaatjes]",
+        "Vet een ovenschaal in en zet de oven op 180 graden",
+        "Verkruimel de geitenkaas",
+    ]
+
+    const cookInstructions = [
+        `Verhit een hapjes pan en voeg hier de chorizo stukjes aan toe (plaat stand 7). Er hoeft geen extra olie toegevoegd worden omdat chorizo al best veel vet bevat. 
+        Bak de chorizo uit totdat het meeste vet eruit is gekomen en ze wat harder aanvoelen.`,
+        "Voeg de ui en paprika toe en voeg een klein beetje water toe. Bak voor 5 min.",
+        "Voeg op het einde de knoflook toe en bak nog een minuut.",
+        "Voeg de cherry tomaatjes, orzo, passata, groentebouillon en de chorizo mix toe aan de ovenschaal en mix het zodat alles goed gemengd is.",
+        "Plaats een stuk aluminium folie over de ovenschaal zodat alles bedekt is. Plaats de ovenschaal voor 35 min in de oven.",
+    ]
+    
+    const displayMetas = (metas) => {
+        const metaContainer = document.getElementsByClassName("metas").item(0);
+        Object.entries(metas).forEach(meta => {
+            [metaLabel, metaValue] = meta;
+            const metaDiv = document.createElement('div');
+            metaDiv.className = "side-bar-meta-detail";
+            
+            const metaLabelSpan = document.createElement('span');
+            metaLabelSpan.className = "meta-label";
+            metaLabelSpan.textContent = metaLabel
+
+            const metalValueSpan = document.createElement('span');
+            metalValueSpan.className = "meta-value";
+            metalValueSpan.textContent = metaValue;
+
+            metaDiv.appendChild(metaLabelSpan);
+            metaDiv.appendChild(metalValueSpan);
+
+            metaContainer.appendChild(metaDiv);
+        })
+    }
+
+    const displayIngredients = (ingredients) => {
+        const ingredientsArticle = document.getElementsByClassName("side-bar-ingredient-list").item(0);
+        ingredients.forEach(ingredient => {
+            [ingredientName, amount] = ingredient;
+            const ingredientDiv = document.createElement('div');
+            ingredientDiv.className = "side-bar-ingredient"
+
+            const ingredientValue = document.createElement('span');
+            ingredientValue.className = "ingredient-value";
+            ingredientValue.textContent = ingredientName;
+
+            const ingredientAmount = document.createElement('span');
+            ingredientAmount.className = "ingredient-amount";
+            ingredientAmount.textContent = amount;
+
+            ingredientDiv.appendChild(ingredientValue);
+            ingredientDiv.appendChild(ingredientAmount);
+            
+            ingredientsArticle.append(ingredientDiv)
+        })
+    }
+
+    const displayInstructions = (instructions, className) => {
+        const instructionSection = document.getElementsByClassName(className).item(0);
+        instructions.forEach(instruction => {
+            const listItem = document.createElement('li');
+            listItem.textContent = instruction;
+
+            instructionSection.appendChild(listItem);
+        })
+    }
+
+    displayIngredients(ingredients)
+    displayMetas(metas);
+    displayInstructions(prepInstructions, "main-prep");
+    displayInstructions(cookInstructions, "main-cook")
+
+
+</script>
 </html>
