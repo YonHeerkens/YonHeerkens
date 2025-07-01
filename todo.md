@@ -16,10 +16,12 @@
 
 - [] Add a recipe to the data base through the api
 
+- [] Fetch a recipe from database
+
 - [] Remove a recipe to the database through the api
 
-- [] Convert the orzo.html to a normal template using the DOM and recipe objects
+- [x] Convert the orzo.html to a normal template using the DOM and recipe objects
 
-  - [] Add method to convert the meta's (cooktime etc) html
-  - [] Add method to convert the ingredients html
-  - [] Add method to convert the Instruction to html
+  - [x] Add method to convert the meta's (cooktime etc) html
+  - [x] Add method to convert the ingredients html
+  - [x] Add method to convert the Instruction to html

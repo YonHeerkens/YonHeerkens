@@ -13,7 +13,7 @@ const generateUserList = (users) => {
 
 const getUsers = async () => {
   console.log('Going to fetch some stuff');
-  const response = await fetch('https://pi_api.yonheerkens.dev/api/user');
+  const response = await fetch('https://pi_api.yonheerkens.dev/api/user/login');
   const data = await response.json();
   return data.users;
 };
@@ -32,17 +32,20 @@ export async function displayUsers() {
 
 // add validation before calling this function
 export async function createNewUser(first_name, last_name, email) {
-  const response = await fetch('https://pi_api.yonheerkens/dev/api/user', {
-    method: 'POST',
-    body: JSON.stringify({
-      first_name,
-      last_name,
-      email,
-    }),
-    headers: {
-      'Content-type': 'application/json',
-    },
-  });
+  const response = await fetch(
+    'https://pi_api.yonheerkens/dev/api/user/login',
+    {
+      method: 'POST',
+      body: JSON.stringify({
+        first_name,
+        last_name,
+        email,
+      }),
+      headers: {
+        'Content-type': 'application/json',
+      },
+    }
+  );
 
   const status = await response.json();
   console.log(status);
